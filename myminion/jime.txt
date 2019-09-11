@@ -1,0 +1,17 @@
+I choose not to put Task in a Mojolicious Task Library
+because I did NOT want to use Mojolicious::Lite
+Just Minion!
+
+My tasks are locate in ~/lib/MyTasks.pm
+
+I wanted to show how to name the queue your jobs
+are submitted to, 'notdefault' ;-)
+
+Submit 2 jobs (tasks 'Bob1' and 'Bob2') 
+$ perl ../awb/submit.pl
+
+Job Dependencies
+Submit 3 jobs (tasks 'Bob1' and 'Longbob2' are parents, and must complete before
+task 'pack' [child] then will execute)
+$ perl ../awb/submit_pack.pl
+

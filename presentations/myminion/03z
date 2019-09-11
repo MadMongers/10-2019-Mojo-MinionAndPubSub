@@ -1,0 +1,20 @@
+
+
+
+
+
+                                        Job Dependencies
+
+     Submit 3 jobs (tasks 'Bob1' and 'Longbob2' are parents, and must complete before
+     task 'Pack' [child] then will execute)
+
+     view ../../myminion/submit_pack.pl
+     -
+     $ perl submit_pack.pl
+
+
+
+
+
+
+

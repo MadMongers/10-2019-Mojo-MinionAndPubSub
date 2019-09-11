@@ -1,0 +1,64 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Mojo::Pg::PubSub -- Part 3
+indent: 5
+auto_size: 1
+# height: 18
+# width: 69
+vim_opts: '-u NONE'
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+Mojo::Pg::PubSub -- Part 3
+
+This presentation is using Ingy döt Net's Vroom
+
+----
+== Mojo's Publish and Subscribe
+
+If listeners are not up, messages are lost. Think /dev/null
+Pg and mysql. SQLite is deprecated
+
+Crank up 2 listeners. Note: pubsub5r.pl and pubsub6r.pl are the same program.
+Why, $0 is part of the output
+$ perl pubsub5r.pl &
+$ perl pubsub6r.pl &
+
+Send messages
+$ perl pubsubs.pl
+
+And watch the output from the listener(s)/receiver(s)
+----
+== Lets Look at the Code
+
+view ../../pubsub/pubsub5r.pl
+
+view ../../pubsub/pubsubs.pl
+
++-
+
+----
+== Questions ?
+
+Complete archive will be on the MadMongers' github page
+   MadMongers/10-2019-Minion/pubsub
+   https://github.com/MadMongers/10-2019-Minion
+
+----
+== The End

@@ -1,0 +1,20 @@
+                                  Working in a Job(coal) Mine
+
+     view ../../myminion/worker.pl
+     -
+     Run a worker
+
+     $ perl minion.pl minion worker -q default
+     or
+     $ bash start_worker.sh   # created by jime
+
+     perl worker.pl minion worker -q notdefault -q default
+     [2019-08-31 09:12:12...][29322][info] Worker 29322 started
+     [2019-08-31 09:12:28...][29322][debug]Process 29484 is performing job "94" with task "Bob1"
+     AWB::Task::Bob1 started
+     AWB::Task::Bob2 started
+     [2019-08-31 09:12:28...][29322][debug]Process 29485 is performing job "95" with task "Bob2"
+     AWB::Task::Bob1 ended
+     AWB::Task::Bob2 ended
+     ...
+

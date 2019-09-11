@@ -1,0 +1,92 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: My Minion Stuff -- Part 2
+indent: 5
+auto_size: 1
+# height: 18
+# width: 69
+vim_opts: '-u NONE'
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+My Minion Stuff -- Part 2
+
+This presentation is using Ingy döt Net's Vroom
+
+----
+== Jim's Stuff
+
+I put 'tasks' in a Mojolicious Task Library. See Minion POD -> Growing
+
++My tasks are locate in {PROJECT}/lib/AWB/Task/{TASKS}.pm
+
++I wanted to show how to name the queue your jobs are submitted to, 'notdefault' ;-)
+
++Submit 2 jobs (tasks 'Bob1' and 'Bob2') 
+
++view ../../myminion/submit.pl
++-
++$ perl submit.pl
+----
+== Job Dependencies
+
+Submit 3 jobs (tasks 'Bob1' and 'Longbob2' are parents, and must complete before
+task 'Pack' [child] then will execute)
+
++view ../../myminion/submit_pack.pl
++-
++$ perl submit_pack.pl
+----
+== Working in a Job(coal) Mine
+
+view ../../myminion/worker.pl
++-
++Run a worker
+
+$ perl minion.pl minion worker -q default
+or
+$ bash start_worker.sh   # created by jime
+
+perl worker.pl minion worker -q notdefault -q default
+[2019-08-31 09:12:12...][29322][info] Worker 29322 started
+[2019-08-31 09:12:28...][29322][debug]Process 29484 is performing job "94" with task "Bob1"
+AWB::Task::Bob1 started
+AWB::Task::Bob2 started
+[2019-08-31 09:12:28...][29322][debug]Process 29485 is performing job "95" with task "Bob2"
+AWB::Task::Bob1 ended
+AWB::Task::Bob2 ended
+...
+----
+== Also
+
+The code archive also has
+
+watch_minion.sh  # minion browser
+show_jobs.sh     # display jobs at command line
+
+----
+== Questions ?
+
+Complete archive will be on the MadMongers' github page
+   MadMongers/10-2019-Minion/myminion
+   https://github.com/MadMongers/10-2019-Minion
+
+
+----
+== The End

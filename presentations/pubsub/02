@@ -1,0 +1,20 @@
+
+
+                                  Mojo's Publish and Subscribe
+
+     If listeners are not up, messages are lost. Think /dev/null
+     Pg and mysql. SQLite is deprecated
+
+     Crank up 2 listeners. Note: pubsub5r.pl and pubsub6r.pl are the same program.
+     Why, $0 is part of the output
+     $ perl pubsub5r.pl &
+     $ perl pubsub6r.pl &
+
+     Send messages
+     $ perl pubsubs.pl
+
+     And watch the output from the listener(s)/receiver(s)
+
+
+
+

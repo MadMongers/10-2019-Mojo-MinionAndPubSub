@@ -1,0 +1,115 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Minion via Mojolicious Advent Calendar 2018
+indent: 5
+auto_size: 1
+# height: 18
+# width: 69
+vim_opts: '-u NONE'
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+Minion via Mojolicious Advent Calendar 2018
+
+This presentation is using Ingy döt Net's Vroom
+
+----
+== Starting Place for Minion
+
+Mojolicious Advent Calendar 2018 Day 10
+Minion Stands Alone by Doug Bell (preaction)
+
+He created a task called 'check_url' to check how long it takes to 
+download a URL (mojolicious.org)
+
+He does not declare a queue name for his jobs so they
+go to a queue named 'default'
+
+Note: In his command line examples where he uses 'myapp.pl', it
+      should be 'minion.pl'
+----
+== Lets Look at the code: Day 10
+
+view ../../day10/minion.pl
+
++
+
++Add a job by command line
+ $ perl minion.pl minion job -e check_url -a '["http://mojolicious.org"]'
+
++Add a job via program
+view ../../day10/enqueue.pl
+
++
+
++$ perl enqueue.pl
+
+----
+== Lets Look at the code: Day 10: continue
+
+Run a worker
+
+$ perl minion.pl minion worker -q default
+or
+$ bash start_worker.sh   # created by jime
+
+perl minion.pl minion worker -q default
+[2019-08-30 10:49:15...] [9815] [info] Worker 9815 started
+[2019-08-30 10:49:15...] [9815] [debug] Process 9816 is performing job "1" with task "check_url"
+[2019-08-30 10:49:15...] [9816] [info] Fetching http://mojolicious.org took 0.132 seconds
+
+----
+== Lets Look at the code: Day 11
+
+Day 11: Who Watches The Minions: Admin UI
+
+view ../../day10/watch_minion.pl
+
++
+
++$ perl watch_minion.pl daemon
+or
+$ bash watch_minion.sh  # created by jime
+
+perl watch_minion.pl daemon
+[2019-08-30 20:38:22.34590] [16493] [info] Listening at "http://*:3000"
+Server available at http://127.0.0.1:3000
+----
+== Lets Look at the code: Day 11 : continue
+
+Minion Jobs Command (Query Jobs)
+
+Show list of jobs
+$ perl minion.pl minion job | more
+or
+$ bash show_jobs.sh |more
+
+By job ID
+$ perl minion.pl minion job 1
+or
+$ bash show_jobs.sh 1 |more
+----
+== Questions ?
+
+Complete archive will be on the MadMongers' github page
+   MadMongers/10-2019-Minion/day10
+   https://github.com/MadMongers/10-2019-Minion
+
+----
+== The End

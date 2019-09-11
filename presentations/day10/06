@@ -1,0 +1,20 @@
+
+
+                            Lets Look at the code: Day 11 : continue
+
+     Minion Jobs Command (Query Jobs)
+
+     Show list of jobs
+     $ perl minion.pl minion job | more
+     or
+     $ bash show_jobs.sh |more
+
+     By job ID
+     $ perl minion.pl minion job 1
+     or
+     $ bash show_jobs.sh 1 |more
+
+
+
+
+

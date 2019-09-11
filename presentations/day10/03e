@@ -1,0 +1,23 @@
+
+                                 Lets Look at the code: Day 10
+
+     view ../../day10/minion.pl
+
+
+
+     Add a job by command line
+      $ perl minion.pl minion job -e check_url -a '["http://mojolicious.org"]'
+
+     Add a job via program
+     view ../../day10/enqueue.pl
+
+
+
+
+
+
+
+
+
+
+

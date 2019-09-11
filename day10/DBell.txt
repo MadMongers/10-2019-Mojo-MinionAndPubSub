@@ -1,0 +1,42 @@
+Mojolicious Advent Calendar 2018 Day 10
+Minion Stands Alone by Doug Bell (preaction)
+
+He does not declare a queue name for his jobs so they
+go to a queue named 'default'
+
+He created a task called check_url to check how long it takes to download a URL. 
+minion.pl
+
+Add a job by command line
+$ perl minion.pl minion job -e check_url -a '["http://mojolicious.org"]'
+
+Add a job via program
+edit enqueue.pl
+$ perl enqueue.pl
+
+Run a worker
+$ perl minion.pl minion worker -q default
+or
+$ bash start_worker.sh   # created by jime
+
+[2019-08-30 10:49:15...] [9815] [info] Worker 9815 started
+[2019-08-30 10:49:15...] [9815] [debug] Process 9816 is performing job "1" with task "check_url"
+[2019-08-30 10:49:15...] [9816] [info] Fetching http://mojolicious.org took 0.132 seconds
+
+
+Day 11: Who Watches The Minions: Admin UI
+edit watch_minion.pl
+$ bash watch_minion.sh  # created by jime
+
+
+Minion Jobs Command (Query Jobs)
+
+Show list of jobs
+$ perl minion.pl minion job | more
+or
+$ bash show_jobs.sh |more
+
+By job ID
+$ perl minion.pl minion job 1
+or
+$ bash show_jobs.sh 1 |more

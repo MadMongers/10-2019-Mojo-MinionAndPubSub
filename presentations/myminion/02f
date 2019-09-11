@@ -1,0 +1,20 @@
+
+
+                                          Jim's Stuff
+
+     I put 'tasks' in a Mojolicious Task Library. See Minion POD -> Growing
+
+     My tasks are locate in {PROJECT}/lib/AWB/Task/{TASKS}.pm
+
+     I wanted to show how to name the queue your jobs are submitted to, 'notdefault' ;-)
+
+     Submit 2 jobs (tasks 'Bob1' and 'Bob2')
+
+     view ../../myminion/submit.pl
+     -
+
+
+
+
+
+
