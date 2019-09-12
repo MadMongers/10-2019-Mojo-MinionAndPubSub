@@ -6,7 +6,7 @@ use Config::Any::Perl;
 use feature 'say';
 use utf8::all;
 
-my $config = Config::Any::Perl->load('awb.conf');
+my $config = Config::Any::Perl->load('pubsub.conf');
 my $pg = Mojo::Pg->new( $config->{Pg} );
 
 my $db;
