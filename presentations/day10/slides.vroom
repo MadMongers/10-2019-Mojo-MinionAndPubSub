@@ -48,7 +48,7 @@ Note: In his command line examples where he uses 'myapp.pl', it
 
 view ../../day10/minion.pl
 
-+
++-
 
 +Add a job by command line
  $ perl minion.pl minion job -e check_url -a '["http://mojolicious.org"]'
@@ -56,7 +56,7 @@ view ../../day10/minion.pl
 +Add a job via program
 view ../../day10/enqueue.pl
 
-+
++-
 
 +$ perl enqueue.pl
 
@@ -81,7 +81,7 @@ Day 11: Who Watches The Minions: Admin UI
 
 view ../../day10/watch_minion.pl
 
-+
++-
 
 +$ perl watch_minion.pl daemon
 or
