@@ -16,7 +16,7 @@ map ?? :e .help<CR>
 set laststatus=2
 set statusline=%-20f\ My\ Minion\ Stuff\ --\ Part\ 2
 
-" Overrides from /home/devel/.vroom/vimrc
+" Overrides from /home/madmongers/.vroom/vimrc
 
 
 " Values from slides.vroom config section. (under 'vimrc')
