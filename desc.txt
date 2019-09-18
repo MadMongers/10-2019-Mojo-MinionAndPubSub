@@ -1,0 +1,9 @@
+1) Minion
+    A) Go over Mojolicious Advent Calendar Day 10
+       We'll swap mentions of 'myapp.pl' with 'minion.pl'
+    B) Go over Mojolicious Advent Calendar Day 11
+    C) Submit jobs in a stand alone program
+2) Mojo::Pg::PubSub
+3) We'll discuss IBM MQ-Series and it's PubSub
+4) Minion::Notifier
+    Currently must be coded in a web app

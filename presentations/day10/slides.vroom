@@ -83,11 +83,11 @@ view ../../day10/watch_minion.pl
 
 +-
 
-+$ perl watch_minion.pl daemon
++$ perl watch_minion.pl daemon -l http://*:3001
 or
 $ bash watch_minion.sh  # created by jime
 
-perl watch_minion.pl daemon
+perl watch_minion.pl daemon -l http://*:3001
 [2019-08-30 20:38:22.34590] [16493] [info] Listening at "http://*:3000"
 Server available at http://127.0.0.1:3000
 ----
