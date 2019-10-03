@@ -11,4 +11,4 @@ In a different window
 Send messages 
 $ perl pubsubs.pl
 
-And watch the output from the listener(s)/receiver(s)
+And watch the output from the listener(s)/receivers)

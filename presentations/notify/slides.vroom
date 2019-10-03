@@ -1,0 +1,66 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Minion::Notifier -- Part 4
+indent: 5
+auto_size: 1
+# height: 18
+# width: 69
+vim_opts: '-u NONE'
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+Minion::Notifier
+
+This presentation is using Ingy döt Net's Vroom
+
+----
+== Minion::Notifier
+
+One of their test programs
+view ../../notify/pg.t
+
+POD example with a few additional statements
+view ../../notify/pod.ex.pl
+
+job statii => 'enqueue', 'dequeue', 'finished'
+
++-
+
+My sample program
+view ../../notify/mypodex.pl
++-
+----
+== How to execute my sample program
+
+Start a worker to process job(s)
+$ perl mypodex.pl minion worker -q notdefault -q default
+OR
+$ bash start_worker.sh
+
+Now submit a job
+$ perl mypodex.pl get /doit
+----
+== Questions ?
+
+Complete archive will be on the MadMongers' github page
+   MadMongers/10-2019-Mojo-MinionAndPubSub/notify
+   https://github.com/MadMongers/10-2019-Mojo-MinionAndPubSub
+
+----
+== The End
